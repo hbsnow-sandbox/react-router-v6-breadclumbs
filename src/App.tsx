@@ -1,20 +1,11 @@
-import React from "react";
+import { BrowserRouter } from "react-router-dom";
 
-import { Button } from "./components/Button";
-import { useCount } from "./hooks/useCount";
+import { AppRoutes } from "./AppRoutes";
 
 export const App = (): JSX.Element => {
-  const [count, { countUp, countDown }] = useCount();
-
   return (
-    <main>
-      <p>count is: {count}</p>
-      <p>
-        <Button onClick={() => countUp()}>count up</Button>
-      </p>
-      <p>
-        <Button onClick={() => countDown()}>count down</Button>
-      </p>
-    </main>
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
   );
 };

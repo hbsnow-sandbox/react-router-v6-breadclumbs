@@ -1,5 +1,7 @@
 import { PropsWithChildren } from "react";
 
+import { Link } from "react-router-dom";
+
 import classes from "./index.module.css";
 
 type Props = Readonly<PropsWithChildren<unknown>>;
@@ -15,10 +17,10 @@ export const DefaultLayout = (props: Props): JSX.Element => {
       <nav>
         <ul className={classes.menu}>
           <li>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/users">Users</a>
+            <Link to="/users">Users</Link>
           </li>
         </ul>
       </nav>

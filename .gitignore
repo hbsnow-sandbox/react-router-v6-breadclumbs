@@ -83,3 +83,6 @@ typings/
 dist
 dist-ssr
 \*.local
+
+# aspida
+/src/api/$mock.ts

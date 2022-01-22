@@ -1,14 +1,8 @@
-import { PropsWithChildren } from "react";
-
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 import classes from "./index.module.css";
 
-type Props = Readonly<PropsWithChildren<unknown>>;
-
-export const DefaultLayout = (props: Props): JSX.Element => {
-  const { children } = props;
-
+export const DefaultLayout = (): JSX.Element => {
   return (
     <div className={classes.root}>
       <header>
@@ -24,7 +18,9 @@ export const DefaultLayout = (props: Props): JSX.Element => {
           </li>
         </ul>
       </nav>
-      <main>{children}</main>
+      <main>
+        <Outlet />
+      </main>
     </div>
   );
 };

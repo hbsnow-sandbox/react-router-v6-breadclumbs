@@ -2,13 +2,12 @@ import useAspidaSWR from "@aspida/swr";
 import { Link } from "react-router-dom";
 
 import { client } from "../../api/client";
-import { DefaultLayout } from "../../layouts";
 
 export const Users = (): JSX.Element => {
   const { data } = useAspidaSWR(client.users, "get");
 
   return (
-    <DefaultLayout>
+    <div>
       <h2>ユーザ一覧</h2>
 
       {data ? (
@@ -24,6 +23,6 @@ export const Users = (): JSX.Element => {
       ) : (
         <p>Loading...</p>
       )}
-    </DefaultLayout>
+    </div>
   );
 };

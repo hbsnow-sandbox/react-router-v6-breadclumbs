@@ -1,4 +1,19 @@
+.root {
+  width: 64rem;
+  margin: 0 auto;
+}
+
 .menu {
+  display: flex;
+  list-style-type: none;
+  gap: 1rem;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  margin: 0;
+  padding: 1rem;
+}
+
+.menu > li {
   display: flex;
   list-style-type: none;
   gap: 1rem;

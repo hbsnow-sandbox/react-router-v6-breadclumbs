@@ -10,7 +10,7 @@ export const DefaultLayout = (props: Props): JSX.Element => {
   const { children } = props;
 
   return (
-    <div>
+    <div className={classes.root}>
       <header>
         <h1>Title</h1>
       </header>

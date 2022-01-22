@@ -2,12 +2,18 @@ import useAspidaSWR from "@aspida/swr";
 import { Link } from "react-router-dom";
 
 import { client } from "../../api/client";
+import { Breadcrumbs, DefaultLayout } from "../../layouts";
+
+const breadcrumbs: Breadcrumbs = [
+  { title: "ホーム", to: "/" },
+  { title: "ユーザ一覧" },
+];
 
 export const Users = (): JSX.Element => {
   const { data } = useAspidaSWR(client.users, "get");
 
   return (
-    <div>
+    <DefaultLayout breadcrumbs={breadcrumbs}>
       <h2>ユーザ一覧</h2>
 
       {data ? (
@@ -23,6 +29,6 @@ export const Users = (): JSX.Element => {
       ) : (
         <p>Loading...</p>
       )}
-    </div>
+    </DefaultLayout>
   );
 };

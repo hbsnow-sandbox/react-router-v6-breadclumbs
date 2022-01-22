@@ -1,3 +1,4 @@
-import { DefaultLayout } from "./DefaultLayout";
+import { DefaultLayout, Breadcrumbs } from "./DefaultLayout";
 
 export { DefaultLayout };
+export type { Breadcrumbs };

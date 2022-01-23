@@ -2,9 +2,12 @@ import useAspidaSWR from "@aspida/swr";
 import { Link } from "react-router-dom";
 
 import { client } from "../../api/client";
+import { useBreadcrumbs } from "../../hooks";
 
 export const Users = (): JSX.Element => {
   const { data } = useAspidaSWR(client.users, "get");
+
+  useBreadcrumbs([{ title: "ホーム", to: "/" }, { title: "ユーザ一覧" }]);
 
   return (
     <div>

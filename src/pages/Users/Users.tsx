@@ -1,19 +1,13 @@
-import { useEffect } from "react";
-
 import useAspidaSWR from "@aspida/swr";
 import { Link } from "react-router-dom";
 
 import { client } from "../../api/client";
-import { useSetBreadcrumbsContext } from "../../contexts";
+import { useBreadcrumbs } from "../../hooks";
 
 export const Users = (): JSX.Element => {
   const { data } = useAspidaSWR(client.users, "get");
 
-  const setBreadcrumbs = useSetBreadcrumbsContext();
-
-  useEffect(() => {
-    setBreadcrumbs([{ title: "ホーム", to: "/" }, { title: "ユーザ一覧" }]);
-  }, [setBreadcrumbs]);
+  useBreadcrumbs([{ title: "ホーム", to: "/" }, { title: "ユーザ一覧" }]);
 
   return (
     <div>

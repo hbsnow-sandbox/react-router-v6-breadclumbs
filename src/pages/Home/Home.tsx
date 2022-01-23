@@ -1,13 +1,7 @@
-import { useEffect } from "react";
-
-import { useSetBreadcrumbsContext } from "../../contexts";
+import { useBreadcrumbs } from "../../hooks";
 
 export const Home = (): JSX.Element => {
-  const setBreadcrumbs = useSetBreadcrumbsContext();
-
-  useEffect(() => {
-    setBreadcrumbs([{ title: "ホーム" }]);
-  }, [setBreadcrumbs]);
+  useBreadcrumbs([{ title: "ホーム" }]);
 
   return (
     <div>

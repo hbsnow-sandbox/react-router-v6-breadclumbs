@@ -12523,6 +12523,11 @@ use-latest@^1.0.0:
   dependencies:
     use-isomorphic-layout-effect "^1.0.0"
 
+use-react-router-breadcrumbs@3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/use-react-router-breadcrumbs/-/use-react-router-breadcrumbs-3.0.2.tgz#4e43feee6227de43639a379644f9e7b92824e45e"
+  integrity sha512-tMIosbfVV0pH+i98k/9HDXXhU8eExb9s11FMv8zruM/4MYJ7M6rVwNojVgTqRP3Z9h62TBZUO2842vVT1wpqRg==
+
 use@^3.1.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/use/-/use-3.1.1.tgz#d50c8cac79a19fbc20f2911f56eb973f4e10070f"

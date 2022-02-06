@@ -1,10 +1,16 @@
 import useAspidaSWR from "@aspida/swr";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 import { client } from "../../api/client";
+import { useIsActive } from "../../hooks/useIsActive";
 
 export const Users = (): JSX.Element => {
   const { data } = useAspidaSWR(client.users, "get");
+  const isActive = useIsActive();
+
+  if (!isActive) {
+    return <Outlet />;
+  }
 
   return (
     <div>
